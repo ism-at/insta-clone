@@ -1,15 +1,25 @@
-<script lang='ts'>
+<!-- <script lang='ts'>
     import '../app.css';
     // Supports weights 100-900
     import '@fontsource-variable/inter';
     import { ModeWatcher } from "mode-watcher";
     let {children} = $props();
-</script>
+</script> -->
 
 <!-- NOTE: Rendering the children is equivalence to SLOT -->
-{@render children()} 
+<!-- {@render children()} 
 
-<ModeWatcher/>
+<ModeWatcher/> -->
+
+<script lang="ts">
+	import '../app.css';
+	import '@fontsource-variable/inter';
+	import { ModeWatcher } from 'mode-watcher';
+</script>
+
+<slot />
+<ModeWatcher />
+
 
 
 
