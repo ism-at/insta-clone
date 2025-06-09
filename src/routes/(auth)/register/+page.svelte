@@ -19,7 +19,7 @@
 <Card.Root class="mx-auto max-w-sm">
 
 	<Card.Header>
-    <Card.Title class="text-xl">Sign Up</Card.Title>
+    <Card.Title class="text-xl">Sign  Up</Card.Title>
     <Card.Description>Enter your information to create an account</Card.Description>
   </Card.Header>
 
