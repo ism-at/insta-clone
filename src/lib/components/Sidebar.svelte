@@ -120,43 +120,45 @@
 			</div>
 	   </DropdownMenu.Trigger>
 
-	   <DropdownMenu.Content class="w-[300px] rounded-xl p-3">
-
-		 <DropdownMenu.Group>
-			<DropdownMenu.Item onclick={toggleMode} class="flex cursor-pointer items-center gap-2 p-3">
+			<DropdownMenu.Content class="w-[300px] rounded-xl p-3">
+			<DropdownMenu.Group>
+				<DropdownMenu.Item onclick={toggleMode} class="flex cursor-pointer items-center gap-2 p-3">
 				{#if $mode === 'dark'}
-					<Sun/>
-					Light Mood
+					<Sun /> Light Mood
 				{:else if $mode === 'light'}
-					<Moon/>
-					Dark Mood 
-				{/if}	
-			</DropdownMenu.Item>
-		    <DropdownMenu.Item href='/' class="flex cursor-pointer items-center gap-2 p-3">
-				<Gear/>	
-				Settings
-			</DropdownMenu.Item>
-		    <DropdownMenu.Item href='/' class="flex cursor-pointer items-center gap-2 p-3">
-				<ActivitySquare/>	
-				Activity
-			</DropdownMenu.Item>
-			<DropdownMenu.Item href='/' class="flex cursor-pointer items-center gap-2 p-3">
-				<Bookmark/>	
-				Save
-			</DropdownMenu.Item>
+					<Moon /> Dark Mood
+				{/if}
+				</DropdownMenu.Item>
 
-			<DropdownMenu.Item asChild class="p-0">
+				<DropdownMenu.Item asChild>
+				<a href='/' class="flex cursor-pointer items-center gap-2 p-3">
+					<Gear /> Settings
+				</a>
+				</DropdownMenu.Item>
+
+				<DropdownMenu.Item asChild>
+				<a href='/' class="flex cursor-pointer items-center gap-2 p-3">
+					<ActivitySquare /> Activity
+				</a>
+				</DropdownMenu.Item>
+
+				<DropdownMenu.Item asChild>
+				<a href='/' class="flex cursor-pointer items-center gap-2 p-3">
+					<Bookmark /> Save
+				</a>
+				</DropdownMenu.Item>
+
+				<DropdownMenu.Item asChild class="p-0">
 				<form method="POST" action="/logout" class="w-full flex items-center gap-2 p-3 cursor-pointer">
 					<LogOut />
 					<button type="submit" class="capitalize">Logout</button>
 				</form>
-			</DropdownMenu.Item>
+				</DropdownMenu.Item>
+			</DropdownMenu.Group>
+		</DropdownMenu.Content>
 
-		 </DropdownMenu.Group>
 
-	   </DropdownMenu.Content>
-
-	 </DropdownMenu.Root>
+	</DropdownMenu.Root>
 
 </aside>
 
