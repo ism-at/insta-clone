@@ -1,7 +1,10 @@
-import { fontFamily } from 'tailwindcss/defaultTheme';
-import type { Config } from 'tailwindcss';
+// Rename --> cjs
 
-const config: Config = {
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const { fontFamily } = require('tailwindcss/defaultTheme');
+
+/** @type {import('tailwindcss').Config} */
+const config = {
 	darkMode: ['class'],
 	content: [
 		'./src/**/*.{html,js,svelte,ts}',
@@ -84,4 +87,4 @@ const config: Config = {
 	}
 };
 
-export default config;
+module.exports = config;
