@@ -5,10 +5,17 @@ module.exports = {
   darkMode: ['class'],
   content: [
     './src/**/*.{html,js,svelte,ts}',
+    './*.html',
     './app.html',
-    './node_modules/mode-watcher/**/*.js'
+    './node_modules/**/*.{js,ts,svelte}'
   ],
-  safelist: [/* your list... */],
+  safelist: [
+    'dark', 'bg-background', 'text-foreground', 'border-border',
+    'bg-card', 'text-card-foreground', 'text-muted-foreground',
+    'bg-muted', 'bg-popover', 'text-popover-foreground',
+    'text-primary', 'bg-primary', 'text-secondary', 'bg-secondary',
+    'text-destructive', 'bg-destructive', 'text-accent', 'bg-accent'
+  ],
   theme: {
     container: {
       center: true,
@@ -21,7 +28,7 @@ module.exports = {
       colors: {
         background: 'hsl(var(--background) / <alpha-value>)',
         foreground: 'hsl(var(--foreground) / <alpha-value>)',
-        // ...etc
+        // ... include the rest of your extended colors
       },
       fontFamily: {
         sans: ['InterVariable', ...fontFamily.sans]
