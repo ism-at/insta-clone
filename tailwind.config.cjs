@@ -28,7 +28,6 @@ module.exports = {
       colors: {
         background: 'hsl(var(--background) / <alpha-value>)',
         foreground: 'hsl(var(--foreground) / <alpha-value>)',
-        // ... include the rest of your extended colors
       },
       fontFamily: {
         sans: ['InterVariable', ...fontFamily.sans]
