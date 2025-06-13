@@ -8,7 +8,26 @@ const config: Config = {
 		'./app.html',
 		'./node_modules/mode-watcher/**/*.js'
 	],
-	safelist: ['dark'],
+	safelist: [
+		'dark',
+		'bg-background',
+		'text-foreground',
+		'border-border',
+		'bg-card',
+		'text-card-foreground',
+		'text-muted-foreground',
+		'bg-muted',
+		'bg-popover',
+		'text-popover-foreground',
+		'text-primary',
+		'bg-primary',
+		'text-secondary',
+		'bg-secondary',
+		'text-destructive',
+		'bg-destructive',
+		'text-accent',
+		'bg-accent'
+	],
 	theme: {
 		container: {
 			center: true,
